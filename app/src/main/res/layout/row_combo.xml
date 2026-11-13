@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@drawable/bg_banner"
+    android:padding="10dp"
+    android:layout_marginBottom="8dp">
+
+    <ImageView
+        android:id="@+id/comboIcon"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="12dp"
+        android:contentDescription="@string/app_name" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/comboName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="?android:textColorPrimary" />
+
+        <TextView
+            android:id="@+id/comboApps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="?android:textColorSecondary" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/actPlay"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_play"
+        android:contentDescription="@string/launch" />
+
+    <ImageView
+        android:id="@+id/actEdit"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_edit"
+        android:contentDescription="@string/edit" />
+
+    <ImageView
+        android:id="@+id/actPin"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_home"
+        android:contentDescription="@string/to_home" />
+
+    <ImageView
+        android:id="@+id/actDelete"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_trash"
+        android:contentDescription="@string/delete" />
+</LinearLayout>

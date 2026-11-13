@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.FloatDash" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/maps_blue</item>
+        <item name="colorPrimaryVariant">#1557B0</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/waze</item>
+        <item name="colorOnSecondary">#06303B</item>
+    </style>
+
+    <style name="Theme.FloatDash.Transparent" parent="Theme.FloatDash">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+</resources>

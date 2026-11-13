@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FloatDash</string>
+    <string name="subtitle">Abre combos de apps en ventanas flotantes sobre Nova</string>
+    <string name="label_waze">Waze Flotante</string>
+    <string name="label_maps">Maps Flotante</string>
+    <string name="grant_overlay">Dar permiso</string>
+    <string name="new_combo">Nuevo combo</string>
+    <string name="your_combos">Tus combos</string>
+    <string name="empty_hint">Todavía no hay combos. Tocá "Nuevo combo" para crear uno.</string>
+    <string name="quick_float">Flotante rápido (una app)</string>
+    <string name="waze">Waze</string>
+    <string name="maps">Maps</string>
+    <string name="launch">Lanzar</string>
+    <string name="edit">Editar</string>
+    <string name="to_home">A inicio</string>
+    <string name="delete">Borrar</string>
+    <string name="name_label">Nombre del combo</string>
+    <string name="name_hint">Ej. Viaje</string>
+    <string name="preset_label">Distribución (preset)</string>
+    <string name="p1">1</string>
+    <string name="p2v">2 V</string>
+    <string name="p2h">2 H</string>
+    <string name="p3">3</string>
+    <string name="p4">4</string>
+    <string name="editor_hint">Tocá una región para asignar app. Arrastrá para mover; usá la esquina para redimensionar.</string>
+    <string name="cancel">Cancelar</string>
+    <string name="save">Guardar</string>
+</resources>

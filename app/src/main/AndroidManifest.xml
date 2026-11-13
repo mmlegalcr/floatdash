@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FloatDash">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:resizeableActivity="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".EditComboActivity"
+            android:exported="false"
+            android:resizeableActivity="true" />
+
+        <activity
+            android:name=".LaunchTrampolineActivity"
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:noHistory="true"
+            android:resizeableActivity="true"
+            android:theme="@style/Theme.FloatDash.Transparent" />
+
+        <service
+            android:name=".LaunchService"
+            android:exported="false" />
+
+        <activity-alias
+            android:name=".WazeFloat"
+            android:targetActivity=".LaunchTrampolineActivity"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_waze"
+            android:label="@string/label_waze">
+            <meta-data android:name="target_pkg" android:value="com.waze" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".MapsFloat"
+            android:targetActivity=".LaunchTrampolineActivity"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_maps"
+            android:label="@string/label_maps">
+            <meta-data android:name="target_pkg" android:value="com.google.android.apps.maps" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+    </application>
+</manifest>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="?android:colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name_label"
+            android:textSize="13sp"
+            android:textColor="?android:textColorSecondary" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/name_hint"
+            android:inputType="textCapSentences"
+            android:maxLines="1"
+            android:textColor="?android:textColorPrimary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/preset_label"
+            android:textSize="13sp"
+            android:textColor="?android:textColorSecondary" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="6dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/p1"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                android:insetLeft="0dp" android:insetRight="0dp"
+                android:minWidth="0dp" android:paddingLeft="0dp" android:paddingRight="0dp"
+                android:text="@string/p1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/p2v"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                android:insetLeft="0dp" android:insetRight="0dp"
+                android:minWidth="0dp" android:paddingLeft="0dp" android:paddingRight="0dp"
+                android:text="@string/p2v" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/p2h"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                android:insetLeft="0dp" android:insetRight="0dp"
+                android:minWidth="0dp" android:paddingLeft="0dp" android:paddingRight="0dp"
+                android:text="@string/p2h" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/p3"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                android:insetLeft="0dp" android:insetRight="0dp"
+                android:minWidth="0dp" android:paddingLeft="0dp" android:paddingRight="0dp"
+                android:text="@string/p3" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/p4"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                android:insetLeft="0dp" android:insetRight="0dp"
+                android:minWidth="0dp" android:paddingLeft="0dp" android:paddingRight="0dp"
+                android:text="@string/p4" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="@string/editor_hint"
+            android:textSize="12sp"
+            android:textColor="?android:textColorSecondary" />
+
+        <cr.andres.floatdash.LayoutEditorView
+            android:id="@+id/editor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancel"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="@string/cancel" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                app:backgroundTint="@color/waze"
+                android:textColor="#06303B"
+                app:cornerRadius="12dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
