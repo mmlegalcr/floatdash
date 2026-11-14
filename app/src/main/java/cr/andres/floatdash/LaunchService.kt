@@ -92,10 +92,27 @@ class LaunchService : Service() {
         val bounds = Geometry.toPixels(this, t.left, t.top, t.right, t.bottom)
         val opts = ActivityOptions.makeBasic()
         opts.launchBounds = bounds
+        forceFreeform(opts)
         try {
             startActivity(launch, opts.toBundle())
         } catch (e: Exception) {
             Toast.makeText(this, "Error al abrir $pkg: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    /**
+     * Fuerza el modo de ventana freeform. En varias ROM (TS18/DoFun) las apps
+     * se promueven a pantalla completa aunque se pasen bounds, porque no se fija
+     * el "windowing mode". setLaunchWindowingMode es un método oculto del SDK,
+     * así que lo invocamos por reflexión. WINDOWING_MODE_FREEFORM = 5.
+     */
+    private fun forceFreeform(opts: ActivityOptions) {
+        try {
+            val m = ActivityOptions::class.java.getMethod(
+                "setLaunchWindowingMode", Int::class.javaPrimitiveType
+            )
+            m.invoke(opts, 5)
+        } catch (e: Throwable) {
         }
     }
 
